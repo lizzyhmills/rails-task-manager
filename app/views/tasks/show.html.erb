@@ -6,7 +6,8 @@
   <p><%= "Task is incomplete" %></p>
 <% end %>
 
-<p><%= link_to "Edit", edit_task_path(@task)%></p>
-<p><%= link_to "Delete", task_path(@task),
+<p class="btn btn-outline-secondary text-decoration-none"><%= link_to "Edit", edit_task_path(@task)%></p>
+<p class="btn btn-outline-secondary"><%= link_to "Back to tasks", tasks_path%></p>
+
+<p class="btn btn-outline-danger"><%= link_to "Delete", task_path(@task),
 data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
-<p><%= link_to "Back to tasks", tasks_path%></p>
